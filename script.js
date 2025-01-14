@@ -18,7 +18,7 @@ document.getElementById('start').addEventListener('click', function() {
         //reset
         clearInterval(timeLoop);
         timerRunning = false;
-        timeOutput.textContent = 0;
+        timeOutput.textContent = "00:00:00";
         startButton.textContent = "Start"
         
     //if stop clicked
@@ -29,7 +29,6 @@ document.getElementById('start').addEventListener('click', function() {
             alert("At least one invalid input");
             return; //break out of function
         }
-
         if (parseInt(hoursInput.value) > 99){
             alert("Hours must be less than 100");
             return;
@@ -57,9 +56,6 @@ document.getElementById('start').addEventListener('click', function() {
         remainingMS = remainingSec * 1000;
         startTime = Date.now();
         timerRunning = true;
-    
-        //display initial time
-        timeOutput.textContent = remainingSec;
     
         //change button
         startButton.textContent = "Stop";
