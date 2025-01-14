@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Test Timer",
+    "version": "1.0.0",
+    "description": "Timer extension",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Timer"
+    },
+    "background": {
+        "scripts": ["script.js"]
+    }
+  }
